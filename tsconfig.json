@@ -1,18 +1,36 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "es6",
+    "baseUrl": "./",
     "jsx": "react",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "esm",
+    "module": "esnext",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "src",
+    "declaration": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
     "paths": {
-      "$rust-wasm/*": ["./rust-wasm/pkg/*"]
-    },
-    "esModuleInterop": true
+      "@infra/*": ["src/infra/*"]
+    }
   },
-  "include": ["./src/**/*"]
+  "include": [
+    "src/**/*"
+  ]
 }

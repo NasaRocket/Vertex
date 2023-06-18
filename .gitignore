@@ -57,3 +57,9 @@ docs/website/src/markdown
 .storybook/i18n/locales
 .temp_cache
 .cache-loader
+# Rust artifacts
+**/target
+**/*.rs.bk
+Cargo.lock
+# WebAssembly artifacts
+wasm/pkg/*
